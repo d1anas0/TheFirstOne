@@ -135,39 +135,17 @@ header {
     font-weight: bold;
 }
 
-figure.hero {
-    position: relative;
-    height: 0;
-    padding-left: 0;
-    padding-bottom: 35%;
-    overflow: hidden;
-    margin: 0;
-}
 figure.hero img {
-	-webkit-filter: blur(3px);
-	filter: blur(3px);
-    transform: scale(1.03);
+    transform: scale(1.0);
+    justify-content: center;
 }
-figure.hero figcaption{
-    position: absolute;
-    font-style: normal;
-    padding: 0;
-    margin: 0;
-    left: 0;
-    top: 50%;
-    color: white;
-    
-    transform: translateY(-50%);
-    text-align: center;
-    width: 100%;
-    background-color: rgba(0,0,0,.6);
-    padding: 20px 0;
+
+.quote {
+    color:#9a01ff;
+    font-size: 2.5em;
+    padding: 50px 25px;
 }
-figure.hero figcaption * {
-    font-weight: bold;
-    font-size: 1.4em;
-    text-transform: uppercase;
-}
+
 #offcanvas-left ul,
 #offcanvas-right ul {
     padding: 0
