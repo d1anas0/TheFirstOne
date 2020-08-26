@@ -2,35 +2,37 @@
 #home {
     --first-color: #674ea7;
     --second-color: #f4e767;    
-    --light-gray: lightgray;
 }
 
-#next {
-    --first-color: tomato;
-    --second-color: deepskyblue;    
-    --light-gray: lightgray;
-}
 html,body {
     padding: 0;
     height: 100%;
     margin: 0px;
-    overflow: hidden;
+    overflow: scroll;
 }
-h1,h2,h3,h4,h5,h6 {
-    margin-bottom: 0;
-    padding-bottom: 0;
-    color: var(--first-color);
-}
-p {
-    margin-top: 5px;
-    margin-bottom: 10px;
-}
+
 body {
     display: flex;
 }
-.wrap {
-    left: 280px;
+
+#centre {
+    width: 100%;
+    margin: 0 auto;
 }
+
+h1 {
+    margin-bottom: 0;
+    padding-bottom: 25;
+    color: var(--first-color);
+    font-size: 2.5em;
+}
+
+p {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    font-size: 2em;
+}
+
 #offcanvas-left,
 #offcanvas-right {
     flex: 0 0 280px;
@@ -63,61 +65,31 @@ body {
 .toggle i:hover {
     color: var(--second-color);
 }
-.center {
-    flex: 1 1 auto;
-    min-width: 95%;
-}
 
 header {
-    background-color: #9a01ff;
+    background-color: var(--first-color);
     padding: 15px;
 }
 
-
-nav ul {
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: space-around;
-
-}
-nav ul li{
-    list-style-type: none;
-    padding-left: 0;
-    margin-left: 0;
-    display: inline-flex;
-    padding: 10px;
-}
-nav a {
-    text-decoration: none;
-}
-nav a:hover {
-    text-decoration: underline;
-}
-
-.center section {
-    flex: 1 1 auto;
-    overflow-y: auto;
-}
-
-
-
-header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-}
 
 figure.hero img {
     transform: scale(1.0);
     justify-content: center;
 }
 
-.quote {
-    color:#9a01ff;
-    font-size: 2.5em;
-    padding: 50px 25px;
+blockquote {
+    color:var(--first-color);
+    font-size: 2.5rem;
+    font-style: italic;
+    padding: 20px 50px;
+    border-left: 10px solid grey;
+}
+
+blockquote > p {
+    text-align: right;
+    font-size: 2rem;
+    font-style: italic;
+    color: grey;
 }
 
 #offcanvas-left ul,
@@ -145,37 +117,6 @@ figure.hero img {
     color: var(--first-color);
 }
 
-.thumbnail {
-    background-color: #ffffff;
-
-}
-
-footer {
-    background-color: var(--first-color);
-    color: white;
-    font-size: 1.25em;
-}
-
-footer > p {
-    text-align-last: center;
-}
-
-.no-style li {
-    list-style-type: none;
-}
-
-.no-style ul {
-    margin-top: 0;
-    padding: 0;
-}
-
-.no-style b {
-    margin-bottom: 0;
-    padding: 0;
-}
-.no-style address {
-    font-style: normal;
-}
 form {
     /* width: 100%; */
     background-color: white;
@@ -209,97 +150,46 @@ form textarea {
     resize: vertical;
 }
 
-
 article {
-    display: grid;
-    grid-template-columns: 10% 1fr 10%;
-    grid-column-gap: 20px;
-    padding-bottom: 100px;
+    padding-bottom: 15px;
 }
 
-article > * {
-    grid-column: 2;
-    min-width: 0;
+#intro {
+    color: rgb(3, 152, 172);
 }
 
-article > figure {
-    grid-column: 1 / -1;
-    margin-bottom: 20px;
+section {
+    text-align: center;
 }
 
-article > aside {
-    grid-column: 3;
-    color: #666;
-    font-size: 0.8em;
-    padding-right: 20px;
-}
-
-article > blockquote {
-    grid-column: 2 / -2;
-    margin: 10px 0;
-    color: #888;
-    font-size: 1.2em;
-    line-height: 1.4em;
-    border-left: 10px solid #f0f0f0;
-    padding-left: 10px;
-    margin-left: -20px;
-}
-p mark {
-    background-color: var(--first-color);
-    padding: 0 5px;
-    color: white;
-    font-weight: normal;
-}
-hr {
-    background-color: var(--first-color);
-    height: 2px;
-    width: 100%;
-    border: 0;
-}
-/* General styling */
-
-
-img {
-    width: 100%;
-}
-
-.line-numbers a {
-    text-decoration: none;
-    color: #000;
-    padding-right: 1em;
-}
-
-code {
-    background: #eee;
-    padding: 2px 5px;
-}
-
-pre {
-    background: #eee;
-    padding: 10px 15px;
-    overflow: auto;
-}
-
-pre > code {
-    padding: 0;
+#wrap {
+    width: 75%;
+    margin: 0;
+    text-align: center;
 }
 
 .responsive-vid {
 	position: relative;
-	padding-bottom: 56.25%; /* 16:9 */
-	padding-top: 25px;
-	height: 0;
-}
-.responsive-vid iframe,
-.responsive-vid video {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
+    padding-bottom: 25px;
 }
 
+nav ul {
+    display: flex;
+    justify-content: center;
 
-body{ 
-    overflow-y : auto; 
-} 
+}
+nav ul li{
+    display: inline-flex;
+    padding: 20px;
+}
+
+footer {
+    background-color: var(--first-color);
+    color: white;
+    text-align-last: center;
+}
+
+footer > p {
+    font-size: 1.25em;
+}
+
